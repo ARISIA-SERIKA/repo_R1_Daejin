@@ -23,10 +23,10 @@ option.add_argument('incognito')
 # option.add_argument('headless')
 s = Service(ChromeDriverManager().install())
 browser = webdriver.Chrome(service=s, options=option)
-browser.get("https://naver.com")
-browser.find_element(By.CSS_SELECTOR, "#query").send_keys("코로나")
-browser.find_element(By.CSS_SELECTOR, "#query").send_keys(Keys.ENTER)
-a = browser.find_element(By.CSS_SELECTOR, "#main_pack > section.sc_new.sp_nsite._project_site_channel_root._section_nsite_._sp_ntotal._prs_vsd_bas > div > div").text
+browser.get("https://www.google.co.kr/")
+browser.find_element(By.CSS_SELECTOR, "#APjFqb").send_keys("원숭이 두창 증상")
+browser.find_element(By.CSS_SELECTOR, "#APjFqb").send_keys(Keys.ENTER)
+a = browser.find_element(By.CSS_SELECTOR, "#rso").text
 print(a)
 b = browser.find_elements(By.CLASS_NAME, "bx")
 for n in b :
